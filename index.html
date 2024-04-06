@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Web Page</title>
+<style>
+  /* Resetting default browser styles */
+  * {
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  /* Section styles */
+  .section {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 20px 5px 5px 5px;
+    border: 2px solid black;
+    background-color: #ebdedec6; /* Light gray background color for sections */
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  /* Section title styles */
+  .section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #c92a6c; /* Orange color for section titles */
+    color: #ffffff; /* White text color for section titles */
+    padding: 5px 10px;
+    border: 1px solid black; /* Black border for section titles */
+    border-bottom-left-radius: 5px;
+    font-weight: bold;
+  }
+
+  /* Responsive layout */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .section {
+      width: 49%; /* Two sections side by side */
+      float: left;
+      
+      margin-right: 2%; /* Spacing between sections */
+    }
+    .section:nth-child(2n) {
+      margin-right: 0; 
+      /* Remove margin-right for last section in a row */
+    }
+  }
+
+  @media (min-width: 992px) {
+    .section {
+      width: 31%; /* Three sections side by side */
+      float: left;
+      margin-right: 2%; /* Spacing between sections */
+    }
+    .section:nth-child(3n) {
+      margin-right: 0; /* Remove margin-right for last section in a row */
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="section">
+    <div class="section-title">Chicken</div>
+    <p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere enim non odio eleifend, sed egestas tortor dapibus.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Beef</div>
+    <p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere enim non odio eleifend, sed egestas tortor dapibus.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Sushi</div>
+    <p style="padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere enim non odio eleifend, sed egestas tortor dapibus.</p>
+  </div>
+</body>
+</html>
